@@ -1,24 +1,26 @@
 'use client';
-import React, { useState } from 'react';
+import React from 'react';
+import './globals.css';
 
 export default function Home() {
-  const [text, setText] = useState('hello');
-
   return (
-    <div style={{
-      minHeight: '100vh',
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'center',
-      alignItems: 'center'
-    }}>
-      <h1>{text}</h1>
-      <button
-        style={{ marginTop: '20px', padding: '10px 20px', fontSize: '16px' }}
-        onClick={() => setText(text === 'hello' ? 'welcome' : 'hello')}
-      >
-        Change Text
-      </button>
-    </div>
+    <>
+      <header className="navbar">
+        <button className="logo-btn">
+
+          
+          {/* om du hittar en bättre logo lägg den i public/images och ändra på sökvägen*/}
+          <img src="/images/logo.png" alt="Logo" className="logo-img" />
+
+          
+          <span className="logo-text">MediLink</span>
+        </button>
+        <button className="sign-in-btn">Sign In</button>
+      </header>
+
+      <main style={{ height: '2000px' }}>
+        <h1>Connect professionals with...</h1>
+      </main>
+    </>
   );
 }
