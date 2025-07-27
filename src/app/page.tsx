@@ -9,18 +9,18 @@ export default function Home() {
         <button className="logo-btn">
 
           
-          {/* om du hittar en bättre logo lägg den i public/images och ändra på sökvägen*/}
-          <img src="/images/logo.png" alt="Logo" className="logo-img" />
+          <img src="/images/LogoTyp1.png" alt="Logo" className="logo-img" />
 
-          
-          <span className="logo-text">MediLink</span>
         </button>
-        <button className="sign-in-btn">Sign In</button>
+        <header className="rightBarButtons">
+          <button className="sign-in-btn">Sign In</button>
+          <button className="sign-up-btn">Sign up</button>
+        </header>
       </header>
 
-      <main style={{ height: '2000px' }}>
-        <h1>Connect professionals with...</h1>
-      </main>
+    <main style={{ height: '2000px' }}>
+      <h1>Connect professionals with...</h1>
+    </main>
     </>
   );
 }
