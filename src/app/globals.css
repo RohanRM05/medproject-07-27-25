@@ -14,7 +14,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background-color: rgba(66, 65, 65, 0.25);
+    background-color: rgba(231, 238, 246, 0.25);
     padding: 12px 24px;
     display: flex;
     align-items: center;
@@ -73,4 +73,43 @@ body {
 
 .sign-up-btn:hover {
   background-color: #cacaca;
+}
+
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  height: 1000px; 
+}
+
+.div1 {
+  grid-area: 1 / 1 / 4 / 4;
+  background-color: #E7EEF6;
+}
+.div2 {
+  grid-area: 1 / 4 / 4 / 6;
+  background-color: #E7EEF6;
+}
+.div3 {
+  grid-area: 4 / 1 / 6 / 6;
+  background: linear-gradient(to top, #b0d0f7 0%, #E7EEF6 80%);
+}
+
+
+@media (max-width: 900px) {
+  .parent {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    height: auto;
+  }
+  .div1, .div2, .div3 {
+    grid-area: unset;
+    width: 100%;
+  }
+  .div1, .div2 {
+    margin-bottom: 16px;
+  }
 }
